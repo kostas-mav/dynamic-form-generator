@@ -1,6 +1,14 @@
-<app-form-field
-  *ngFor="let formField of formGroupData"
-  [fieldControlsGroup]="formField"
-></app-form-field>
+<form>
+  <app-form-field
+    *ngFor="let formField of formGroupData"
+    [fieldControlsGroup]="formField"
+  ></app-form-field>
 
-<button (click)="addSection()">ADD SECTION</button>
+  <button
+    class="border rounded bg-white p-1"
+    type="button"
+    (click)="promptSectionName()"
+  >
+    ADD SECTION
+  </button>
+</form>

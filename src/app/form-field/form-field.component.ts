@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { TextInputComponent } from '../shared/inputs/text-input/text-input.component';
 import {
   FormControl,
-  FormGroup,
   NonNullableFormBuilder,
   ReactiveFormsModule,
 } from '@angular/forms';
 
 export type FormFieldControlsGroup = {
   id: FormControl<string>;
-  title: FormControl<string>;
+  name: FormControl<string>;
   content: FormControl<string>;
 };
 
