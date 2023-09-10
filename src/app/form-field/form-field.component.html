@@ -1,5 +1,9 @@
 <div class="form-field-container">
-  <div>{{ fieldControlsGroup.name.value }}</div>
+  <app-text-input [control]="fieldControlsGroup.name"></app-text-input>
 
-  <app-text-input [control]="fieldControlsGroup.content"></app-text-input>
+  <app-text-editor [control]="fieldControlsGroup.content"></app-text-editor>
+
+  <button type="button" class="bg-red-400 px-2" (click)="remove.next(null)">
+    Remove Section
+  </button>
 </div>

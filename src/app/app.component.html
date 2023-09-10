@@ -1,7 +1,10 @@
+<div class="w-full text-center">Built using CKEditor5, UUID & TailwindCSS</div>
+
 <form>
   <app-form-field
     *ngFor="let formField of formGroupData"
     [fieldControlsGroup]="formField"
+    (remove)="removeSection(formField.id.value)"
   ></app-form-field>
 
   <button
@@ -10,5 +13,13 @@
     (click)="promptSectionName()"
   >
     ADD SECTION
+  </button>
+
+  <button
+    class="border rounded bg-white p-1"
+    type="button"
+    (click)="logFormValue()"
+  >
+    Console Log Form
   </button>
 </form>
